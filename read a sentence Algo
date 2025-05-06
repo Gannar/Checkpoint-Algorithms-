@@ -1,0 +1,23 @@
+BEGIN
+    Read sentence
+    Initialize length := 0
+    Initialize wordCount := 0
+    Initialize vowelCount := 0
+
+    FOR each character ch in sentence DO
+        IF ch = '.' THEN
+            BREAK      
+
+        ELSE IF (ch = ' ') THEN
+            wordCount := wordCount + 1       
+
+       ELSE IF (ch IN ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] )THEN
+            vowelCount := vowelCount + 1
+        END_IF
+ length := length + 1
+    END_FOR
+
+    WRITE "Length: ", length
+    WRITE "Words: ", wordCount
+    WRITE "Vowels: ", vowelCount
+END
